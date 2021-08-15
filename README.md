@@ -1,6 +1,6 @@
 # fo-mason
 
-fo-mason is a css-grid based masonry layout library built with sass.
+fo-mason is a css-grid based masonry layout tool built with sass.
 No javascript required!
 
 In the future css will have native masonry support. you can read more about that 
@@ -83,9 +83,16 @@ The `brick-size` can also take negative values.
 </div>  
 ```
 
-## Custom Configuration
+## Installation & Configuration
 
-You can adjust the configuration like so:
+
+### npm
+
+```bash
+npm install fo-mason
+```
+
+After installing it you can adjust the configuration like so:
 ```scss
 @use 'path/to/node_modules/fo-mason' with (
     $gap: 1em,
@@ -101,11 +108,19 @@ You can adjust the configuration like so:
 
 ## Experimenting
 
-You can begin experimenting by cloning the repo 
-and hosting the `test/` folder 
+You can experiment by cloning the repo 
+and hosting the `demo/` folder 
 with something like [live-server](https://www.npmjs.com/package/live-server).
+
+Use `npm run demo` to apply your changes to the styling in the demo.
 
 This tool was built with some of the newer sass features available in [DartSass](https://sass-lang.com/dart-sass).
 If your using [LibSass](https://sass-lang.com/libsass) then you will need to make some adjustments or install a DartSass package.
+Unfortunately as of writing this, the live sass compiler available in vscode uses LibSass. 
+Jekyll and Rails also currently uses LibSass.
+
+
+
+
 
 
