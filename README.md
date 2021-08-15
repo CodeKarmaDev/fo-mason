@@ -21,11 +21,10 @@ I think this picture explains how it works nicely.
 We create columns and rows and define the size of the rows as 1/3 of the columns.
 We let each brick span 3-6 rows and you have a fo-masonry layout.
 
-This is some simplified sass to get give you the gist of whats under the hood.
+This is some simplified sass to give you the gist of whats under the hood.
 ```sass
 $brick: 20rem
 $cuts: 3
-
 
 .mason
     --cuts: #{$cuts}
@@ -64,7 +63,6 @@ then add a `.mason-auto`.
 ```html
 <div class="mason mason-vertical mason-auto">
   <div class="brick">...</div>
-  <div brick-size="2" class="brick">...</div>
   <div class="brick">...</div>
   <div class="brick">...</div>
   ...
@@ -83,6 +81,22 @@ The `brick-size` can also take negative values.
   <div brick-size="1">...</div>
   ...
 </div>  
+```
+
+## Custom Configuration
+
+You can adjust the configuration like so:
+```scss
+@use 'path/to/node_modules/fo-mason/fo-mason' with (
+    $gap: 1em,
+    $brick: 16em,
+    $cuts: 2,
+    $auto: (
+        '3n-1': 1,
+        '4n': 2,
+        '5n+1': 3
+    )
+);
 ```
 
 ## Experimenting
