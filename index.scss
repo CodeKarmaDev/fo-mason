@@ -1,0 +1,34 @@
+
+$gap: 1rem !default;
+$brick: 20rem !default;
+$cuts: 3 !default;
+$auto: (
+    '2n':1,
+    '3n':2,
+    '7n':3,
+) !default;
+
+@use 'mason/core' with (
+    $gap: $gap,
+    $cuts: $cuts,
+);
+@use 'mason/auto' with (
+    $auto: $auto,
+);
+@use 'mason/brick' with(
+    $cuts: $cuts
+);
+@use 'mason/vertical' with (
+    $gap: $gap,
+    $brick: $brick,
+    $cuts: $cuts,
+);
+@use 'mason/horizontal' with (
+    $gap: $gap,
+    $brick: $brick,
+    $cuts: $cuts,
+);
+@use 'mason/media' with (
+    $gap: $gap,
+    $brick: $brick,
+);

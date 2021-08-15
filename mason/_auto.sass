@@ -1,0 +1,5 @@
+$auto: ('2n':1,'4n':2,'5n':3)!default
+    
+@each $nth, $val in $auto
+    .mason-auto > *:nth-child(#{$nth})
+        --brick-span: #{$val}
