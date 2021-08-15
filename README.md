@@ -87,7 +87,7 @@ The `brick-size` can also take negative values.
 
 You can adjust the configuration like so:
 ```scss
-@use 'path/to/node_modules/fo-mason/fo-mason' with (
+@use 'path/to/node_modules/fo-mason' with (
     $gap: 1em,
     $brick: 16em,
     $cuts: 2,
