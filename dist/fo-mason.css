@@ -1,0 +1,74 @@
+.mason {
+  --cuts: 3;
+  --brick-span: 0;
+  display: grid;
+  gap: 1rem;
+  justify-content: center;
+  grid-auto-flow: row dense;
+}
+
+.mason-auto > *:nth-child(2n) {
+  --brick-span: 1;
+}
+
+.mason-auto > *:nth-child(3n) {
+  --brick-span: 2;
+}
+
+.mason-auto > *:nth-child(7n) {
+  --brick-span: 3;
+}
+
+[brick-size="-2"] {
+  --brick-span: -2!important;
+}
+
+[brick-size="-1"] {
+  --brick-span: -1!important;
+}
+
+[brick-size="0"] {
+  --brick-span: 0!important;
+}
+
+[brick-size="1"] {
+  --brick-span: 1!important;
+}
+
+[brick-size="2"] {
+  --brick-span: 2!important;
+}
+
+[brick-size="3"] {
+  --brick-span: 3!important;
+}
+
+.mason-vertical {
+  grid-template-columns: repeat(auto-fill, 20rem);
+  grid-auto-rows: 6rem;
+}
+
+.mason-vertical > * {
+  grid-row-end: span calc(var(--brick-span) + var(--cuts));
+}
+
+.mason-horizontal {
+  grid-template-columns: repeat(auto-fill, 6rem);
+  grid-auto-rows: 20rem;
+}
+
+.mason-horizontal > * {
+  grid-column-end: span calc(var(--brick-span) + var(--cuts));
+}
+
+@media (max-width: 44rem) {
+  .mason-horizontal.mason-auto > * {
+    --brick-span: 0!important;
+  }
+
+  .mason {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*# sourceMappingURL=fo-mason.css.map */

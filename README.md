@@ -6,7 +6,7 @@ No javascript required!
 In the future css will have native masonry support. you can read more about that 
 [here](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout).
 
-This package however works in browsers right now without additional javascript.
+However this package works in browsers right now without additional javascript.
 
 ## Why?
 
@@ -19,9 +19,9 @@ I think this picture explains how it works nicely.
 ![2021-08-14_21-35](https://user-images.githubusercontent.com/5777735/129467538-3c414c71-8dc9-4640-a94d-274c4a07bb5a.png)
 
 We create columns and rows and define the size of the rows as 1/3 of the columns.
-We let each brick span 3-6 rows and you have a fo-masonry layout.
+We let each brick span 3 to 6 rows and you have a fo-masonry layout.
 
-This is some simplified sass to give you the gist of whats under the hood.
+This is some simplified sass to give you the gist of what is under the hood.
 ```sass
 $brick: 20rem
 $cuts: 3
@@ -51,14 +51,14 @@ $cuts: 3
 ## Limitations
 
 The size of each brick is adjustable but somewhat ridged.
-The brick size must be a multiple of your row size.
-And its does not expand with your content.
+The brick size must be a multiple of the row size.
+And bricks don't dynamically expand with their content.
 
 ## Usage
 
-After installing just drop in a `.mason` 
+After installing just drop in a `.mason` class
 and pick either `.mason-horizontal` or `.mason-vertical` 
-then add a `.mason-auto`.
+then add a `.mason-auto` class.
 
 ```html
 <div class="mason mason-vertical mason-auto">
@@ -70,8 +70,8 @@ then add a `.mason-auto`.
 ```
 
 You can define the `brick-size` manually with a brick-size attribute.
-With the default settings `0` is a 1x1 square, 
-while `3` is slightly larger then a 1x2 rectangle.
+The default setting of `0` defines a 1x1 square brick, 
+`3` makes the brick slightly larger then a 1x2 rectangle.
 The `brick-size` can also take negative values.
 ```html
 <div class="mason mason-horizontal">

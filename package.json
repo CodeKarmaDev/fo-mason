@@ -4,16 +4,22 @@
   "description": "fo-mason is a css-grid based masonry layout library built with sass. No javascript required!",
   "main": "index.scss",
   "directories": {
-    "test": "test"
+    "test": "dist"
   },
   "files": [
+    "index.scss",
     "mason/*.sass",
     "mason/*.scss",
-    "index.scss"
+    "dist/*.css",
+    "dist/*.min.css"
   ],
   "scripts": {
     "test": "npx sass test/test.sass test/test.css",
-    "demo": "npx sass demo/style.sass demo/style.css"
+    "demo": "npx sass demo/style.sass demo/style.css",
+    "build": "npx sass index.scss dist/fo-mason.min.css --style=compressed && npx sass index.scss dist/fo-mason.css"
+  },
+  "devDependencies": {
+    "sass": "~1.37"
   },
   "repository": {
     "type": "git",
