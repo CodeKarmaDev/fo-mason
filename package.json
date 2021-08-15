@@ -1,0 +1,29 @@
+{
+  "name": "fo-mason",
+  "version": "1.0.0",
+  "description": "fo-mason is a css-grid based masonry layout library built with sass. No javascript required!",
+  "main": "index.scss",
+  "directories": {
+    "test": "test"
+  },
+  "files": [
+    "mason/*.sass",
+    "mason/*.scss",
+    "index.scss"
+  ],
+  "scripts": {
+    "test": "npx sass test/test.sass test/test.css",
+    "demo": "npx sass demo/style.sass demo/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeKarmaDev/fo-mason.git"
+  },
+  "keywords": ["masonry", "grid", "css", "sass", "mason"],
+  "author": "Sean Ferney sean@codekarma.dev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CodeKarmaDev/fo-mason/issues"
+  },
+  "homepage": "https://github.com/CodeKarmaDev/fo-mason#readme"
+}
