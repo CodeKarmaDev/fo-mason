@@ -16,7 +16,7 @@
 }
 
 .mason-auto > *:nth-child(7n) {
-  --brick-span: 1;
+  --brick-span: 3;
 }
 
 [brick-size="-2"] {
@@ -62,7 +62,7 @@
 }
 
 @media (max-width: 44rem) {
-  .mason.mason-auto > * {
+  .mason-horizontal.mason-auto > * {
     --brick-span: 0!important;
   }
 
