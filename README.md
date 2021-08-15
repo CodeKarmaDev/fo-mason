@@ -16,16 +16,16 @@ To have fun and flex my understanding of css-grid, obviously.
 
 I think this picture explains it nicely.
 
-[put image here](#)
-
+![2021-08-14_21-35](https://user-images.githubusercontent.com/5777735/129467538-3c414c71-8dc9-4640-a94d-274c4a07bb5a.png)
 
 We create columns and rows and define the size of the rows as 1/3 of the columns.
-We let each brick be span 3-6 rows and you have a fo-masonry layout.
+We let each brick span 3-6 rows and you have a fo-masonry layout.
 
-
+Some simplified sass. You have to do some adjustments to handle a `gap` accurately.
 ```sass
-$brick: 20rem;
-$cuts: 3;
+$brick: 20rem
+$cuts: 3
+
 
 .mason
     --cuts: #{$cuts}
@@ -47,7 +47,7 @@ $cuts: 3;
 .mason-vertical > *
     grid-row-end: span calc(var(--brick-span) + var(--cuts))
 ```
-You have to do some adjustments to handle a `gap` accurately
+
 
 ## Limitations
 
@@ -57,9 +57,9 @@ And its does not expand with your content.
 
 ## Usage
 
-Container element
-`.mason` > `.mason-vertical` `.mason-horizontal` `.mason-auto`
-
+After installing just drop in a `.mason` 
+and pick either `.mason-horizontal` or `.mason-vertical` 
+then add a `.mason-auto`.
 
 ```html
 <div class="mason mason-vertical mason-auto">
@@ -76,7 +76,7 @@ With the default settings `0` is a 1x1 square,
 while `3` is slightly larger then a 1x2 rectangle.
 The `brick-size` can also take negative values.
 ```html
-<div class="mason mason-vertical">
+<div class="mason mason-horizontal">
   <div brick-size="0">...</div>
   <div brick-size="-2">...</div>
   <div brick-size="3">...</div>
