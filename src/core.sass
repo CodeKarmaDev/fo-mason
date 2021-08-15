@@ -1,0 +1,23 @@
+
+$brick: 18rem!default
+$cuts: 3!default
+$gap: 1rem!default
+$auto: ('2n':1,'4n':2,'5n':3)!default
+
+.mason
+    --cuts: #{$cuts}
+    --brick-span: 0
+    
+    display: grid    
+    gap: $gap
+    justify-content: center
+    grid-auto-flow: row dense
+
+@each $nth, $val in $auto
+    .mason-auto > *:nth-child(#{$nth})
+        --brick-span: #{$val}
+
+@for $s from -$cuts + 1 through $cuts
+    [brick-size="#{$s}"]
+        --brick-span: #{$s}!important
+

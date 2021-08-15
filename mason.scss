@@ -1,0 +1,30 @@
+
+$gap: 1rem;
+$brick: 20rem;
+$cuts: 3;
+$auto: (
+    '2n':1,
+    '3n':2,
+    '7n':1,
+);
+
+@use 'src/core' with (
+    $gap: $gap,
+    $brick: $brick,
+    $cuts: $cuts,
+    $auto: $auto,
+);
+@use 'src/vertical' with (
+    $gap: $gap,
+    $brick: $brick,
+    $cuts: $cuts,
+);
+@use 'src/horizontal' with (
+    $gap: $gap,
+    $brick: $brick,
+    $cuts: $cuts,
+);
+@use 'src/media' with (
+    $gap: $gap,
+    $brick: $brick,
+);

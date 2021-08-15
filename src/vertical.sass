@@ -1,0 +1,15 @@
+
+@use 'sass:math' as *
+
+$brick: 6rem !default
+$cuts: 2 !default
+$gap: 1rem !default
+
+$cut-brick: div($gap + $brick - $gap * $cuts, $cuts)
+
+.mason-vertical
+    grid-template-columns: repeat(auto-fill, #{$brick})
+    grid-auto-rows: $cut-brick
+
+.mason-vertical > *
+    grid-row-end: span calc(var(--brick-span) + var(--cuts))

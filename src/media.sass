@@ -1,0 +1,8 @@
+$brick: 18rem!default
+$gap: 1rem!default
+    
+@media (max-width: #{$brick * 2 + $gap * 4})
+    .mason.mason-auto > *
+        --brick-span: 0!important
+    .mason
+        grid-template-columns: 1fr
