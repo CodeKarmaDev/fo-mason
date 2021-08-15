@@ -91,7 +91,7 @@ You can begin experimenting by cloning the repo
 and hosting the `test/` folder 
 with something like [live-server](https://www.npmjs.com/package/live-server).
 
-This tool was built with the some of the newer sass features available in [DartSass](https://sass-lang.com/dart-sass).
-If your using [LibSass](https://sass-lang.com/libsass) then you will need to make some adjustments or install a DarkSass package.
+This tool was built with some of the newer sass features available in [DartSass](https://sass-lang.com/dart-sass).
+If your using [LibSass](https://sass-lang.com/libsass) then you will need to make some adjustments or install a DartSass package.
 
 
