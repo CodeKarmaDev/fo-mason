@@ -92,7 +92,8 @@ The `brick-size` can also take negative values.
 npm install fo-mason
 ```
 
-After installing it you can adjust the configuration like so:
+After installing it you can import it 
+and adjust the configuration like so:
 ```scss
 @use 'path/to/node_modules/fo-mason' with (
     $gap: 1em,
@@ -105,6 +106,13 @@ After installing it you can adjust the configuration like so:
     )
 );
 ```
+
+### cdn
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fo-mason@1/dist/fo-mason.min.css">
+```
+Installing this package via cdn makes it less customizable. 
 
 ## Experimenting
 
