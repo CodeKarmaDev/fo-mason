@@ -14,14 +14,14 @@ To have fun and flex my understanding of css-grid, obviously.
 
 ## The Method
 
-I think this picture explains it nicely.
+I think this picture explains how it works nicely.
 
 ![2021-08-14_21-35](https://user-images.githubusercontent.com/5777735/129467538-3c414c71-8dc9-4640-a94d-274c4a07bb5a.png)
 
 We create columns and rows and define the size of the rows as 1/3 of the columns.
 We let each brick span 3-6 rows and you have a fo-masonry layout.
 
-Some simplified sass. You have to do some adjustments to handle a `gap` accurately.
+This is some simplified sass to get give you the gist of whats under the hood.
 ```sass
 $brick: 20rem
 $cuts: 3
